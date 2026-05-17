@@ -1,0 +1,12 @@
+# Uploads Directory
+
+This directory stores uploaded product images and videos.
+
+## Structure
+- Images: .jpg, .jpeg, .png, .gif
+- Videos: .mp4, .mov, .avi
+
+## Security
+- File type validation
+- Size limits (50MB max)
+- Secure file naming
