@@ -132,13 +132,13 @@ export default function AdminSettings() {
                 onClick={() => setValue('announcementMessage', '💥 Today\'s Best Deals - Limited Time Only!')}
                 className="block w-full text-left p-2 hover:bg-gray-50 rounded"
               >
-                💥 Today's Best Deals - Limited Time Only!
+                💥 Today&apos;s Best Deals - Limited Time Only!
               </button>
               <button
-                onClick={() => setValue('announcementMessage', '🚚 Free Shipping on Orders Over $50!')}
+                onClick={() => setValue('announcementMessage', '🚚 Free Shipping on Orders Over ₹500!')}
                 className="block w-full text-left p-2 hover:bg-gray-50 rounded"
               >
-                🚚 Free Shipping on Orders Over $50!
+                🚚 Free Shipping on Orders Over ₹500!
               </button>
             </div>
           </div>

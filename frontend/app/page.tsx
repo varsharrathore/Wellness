@@ -94,7 +94,7 @@ export default function HomePage() {
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold gradient-text mb-1 md:mb-2 tracking-tight">
                 🔥 HOT DEALS 🔥
               </h2>
-              <p className="text-xs md:text-sm text-gray-600">Limited time offers you can't miss!</p>
+              <p className="text-xs md:text-sm text-gray-600">Limited time offers you can&apos;t miss!</p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-8">
@@ -128,7 +128,7 @@ export default function HomePage() {
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold gradient-text mb-1 md:mb-2 tracking-tight">
                 ✨ TRENDING NOW ✨
               </h2>
-              <p className="text-xs md:text-sm text-gray-600">What everyone's talking about</p>
+              <p className="text-xs md:text-sm text-gray-600">What everyone&apos;s talking about</p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 lg:gap-8">
