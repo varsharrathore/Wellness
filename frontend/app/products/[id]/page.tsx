@@ -11,6 +11,9 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import toast from 'react-hot-toast';
 import Cookies from 'js-cookie';
+
+// Tell Next.js this is a dynamic page fetched at runtime
+export const dynamic = 'force-dynamic';
 import { formatPrice } from '@/lib/price';
 
 export default function ProductDetail() {

@@ -1,21 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   output: 'export',
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  eslint: { ignoreDuringBuilds: true },
+  typescript: { ignoreBuildErrors: true },
   images: {
-    domains: ['localhost'],
+    unoptimized: true,
     remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: 'localhost',
-        port: '5000',
-        pathname: '/uploads/**',
-      },
+      { protocol: 'http', hostname: 'localhost', port: '5000', pathname: '/uploads/**' },
+      { protocol: 'https', hostname: '**' },
     ],
   },
   env: {

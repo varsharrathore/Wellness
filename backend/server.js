@@ -13,8 +13,29 @@ const walletRoutes = require('./routes/wallet');
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// CORS — in production frontend and backend are on the same domain, so just allow all origins
+// If you deploy separately, set FRONTEND_URL env var
+const allowedOrigins = [
+  'http://localhost:3000',
+  'http://localhost:3001',
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true);
+    if (
+      allowedOrigins.includes(origin) ||
+      origin.endsWith('.netlify.app') ||
+      origin.endsWith('.railway.app') ||
+      origin.endsWith('.onrender.com')
+    ) {
+      return callback(null, true);
+    }
+    callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true
+}));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
