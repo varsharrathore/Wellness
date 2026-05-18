@@ -1,4 +1,7 @@
-
+[[redirects]]
+  from = "/*"
+  to = "/page.tsx"
+  status = 200
 [build]
   command = "npm run build"
 
