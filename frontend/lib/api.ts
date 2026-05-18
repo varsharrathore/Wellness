@@ -1,7 +1,11 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+// On Vercel: frontend and API are on same domain, so use relative /api
+// In local dev: use localhost:5000
+const API_URL = typeof window !== 'undefined'
+  ? (process.env.NEXT_PUBLIC_API_URL || '/api')   // browser: use env var or relative
+  : (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'); // SSR: use full URL
 
 const api = axios.create({
   baseURL: API_URL,
