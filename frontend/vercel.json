@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "rewrites": [
+    { "source": "/api/auth/:path*", "destination": "/api/auth/[...params]" },
+    { "source": "/api/products/:path*", "destination": "/api/products/[...params]" },
+    { "source": "/api/orders/:path*", "destination": "/api/orders/[...params]" },
+    { "source": "/api/categories/:path*", "destination": "/api/categories/[...params]" },
+    { "source": "/api/wallet/:path*", "destination": "/api/wallet/[...params]" },
+    { "source": "/api/admin/:path*", "destination": "/api/admin/[...params]" }
+  ]
+}
